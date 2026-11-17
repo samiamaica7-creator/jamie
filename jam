@@ -1,0 +1,215 @@
+mport random
+ 
+while True:
+ 
+    print("\n========================================")
+    print("        JAMAICA'S PYTHON ACADEMY")
+    print("========================================")
+ 
+    print("[1] PRELIMINARY")
+    print("[2] MIDTERM")
+    print("[3] FINAL")
+    print("[4] EXIT")
+ 
+    choice = input("\nSelect your option: ")
+ 
+    # PRELIMINARY
+ 
+    if choice == "1":
+ 
+        while True:
+ 
+            print("\n========== PRELIMINARY ==========")
+            print("[1] VIEW LESSONS")
+            print("[2] TAKE QUIZ")
+            print("[3] RETURN")
+ 
+            option = input("Choose an option: ")
+ 
+            if option == "1":
+ 
+                print("\n========== PRELIMINARY LESSONS ==========")
+ 
+                print("\n1. INTRODUCTION TO PROGRAMMING")
+                print("Programming is giving instructions")
+                print("to make a computer perform tasks.")
+ 
+                print("\n2. PYTHON LANGUAGE")
+                print("Python is a programming language")
+                print("used to create different programs.")
+ 
+                print("\n3. BASIC SYNTAX")
+                print("Syntax is the proper way of writing code.")
+                print('Example: print("Hello Jamaica!")')
+ 
+                print("\n4. OUTPUT")
+                print("The print() function shows information.")
+ 
+            elif option == "2":
+ 
+                print("\n========== PRELIMINARY QUIZ ==========")
+ 
+                score = 0
+ 
+                questions = [
+                    ("What is used to display output?", "print"),
+                    ("What is the name of the programming language?", "python"),
+                    ("What do we call the rules of writing code?", "syntax")
+                ]
+ 
+                random.shuffle(questions)
+ 
+                for question, answer in questions:
+ 
+                    print("\n" + question)
+                    user = input("Your answer: ")
+ 
+                    if user.lower() == answer:
+                        print("Correct answer!")
+                        score += 1
+                    else:
+                        print("Incorrect! Answer:", answer)
+ 
+                print("\nYour Score:", score, "/ 3")
+ 
+            elif option == "3":
+                break
+ 
+            else:
+                print("Invalid option!")
+ 
+    # MIDTERM
+ 
+    elif choice == "2":
+ 
+        while True:
+ 
+            print("\n========== MIDTERM ==========")
+            print("[1] VIEW LESSONS")
+            print("[2] TAKE QUIZ")
+            print("[3] RETURN")
+ 
+            option = input("Choose an option: ")
+ 
+            if option == "1":
+ 
+                print("\n========== MIDTERM LESSONS ==========")
+ 
+                print("\n1. VARIABLES")
+                print("Variables are used to store data.")
+ 
+                print("\n2. DATA TYPES")
+                print("Examples: int, float, str, bool")
+ 
+                print("\n3. INPUT FUNCTION")
+                print("The input() function accepts user data.")
+ 
+                print("\n4. CONDITIONAL STATEMENTS")
+                print("if, elif, and else are used to check conditions.")
+ 
+            elif option == "2":
+ 
+                print("\n========== MIDTERM QUIZ ==========")
+ 
+                score = 0
+ 
+                questions = [
+                    ("What stores information in Python?", "variable"),
+                    ("What function accepts user input?", "input"),
+                    ("What statement checks a condition?", "if")
+                ]
+ 
+                random.shuffle(questions)
+ 
+                for question, answer in questions:
+ 
+                    print("\n" + question)
+                    user = input("Your answer: ")
+ 
+                    if user.lower() == answer:
+                        print("Correct answer!")
+                        score += 1
+                    else:
+                        print("Incorrect! Answer:", answer)
+ 
+                print("\nYour Score:", score, "/ 3")
+ 
+            elif option == "3":
+                break
+ 
+            else:
+                print("Invalid option!")
+ 
+    # FINAL
+ 
+    elif choice == "3":
+ 
+        while True:
+ 
+            print("\n========== FINAL ==========")
+            print("[1] VIEW LESSONS")
+            print("[2] TAKE QUIZ")
+            print("[3] RETURN")
+ 
+            option = input("Choose an option: ")
+ 
+            if option == "1":
+ 
+                print("\n========== FINAL LESSONS ==========")
+ 
+                print("\n1. ARITHMETIC OPERATORS")
+                print("+ Addition")
+                print("- Subtraction")
+                print("* Multiplication")
+                print("/ Division")
+ 
+                print("\n2. LOOPS")
+                print("Loops repeat instructions.")
+ 
+                print("\n3. FUNCTIONS")
+                print("Functions are reusable blocks of code.")
+ 
+            elif option == "2":
+ 
+                print("\n========== FINAL QUIZ ==========")
+ 
+                score = 0
+ 
+                questions = [
+                    ("What symbol is used for addition?", "+"),
+                    ("What symbol is used for subtraction?", "-"),
+                    ("What symbol is used for multiplication?", "*")
+                ]
+ 
+                random.shuffle(questions)
+ 
+                for question, answer in questions:
+ 
+                    print("\n" + question)
+                    user = input("Your answer: ")
+ 
+                    if user == answer:
+                        print("Correct answer!")
+                        score += 1
+                    else:
+                        print("Incorrect! Answer:", answer)
+ 
+                print("\nYour Score:", score, "/ 3")
+ 
+            elif option == "3":
+                break
+ 
+            else:
+                print("Invalid option!")
+ 
+    # EXIT PROGRAM
+ 
+    elif choice == "4":
+ 
+        print("\nThank you for using")
+        print("JAMAICA'S PYTHON ACADEMY!")
+        print("Keep learning and keep practicing!")
+        break
+ 
+    else:
+        print("\nInvalid choice. Please try again.")
